@@ -180,30 +180,12 @@ def randomDot_6(Heads):
         #     break
 
 startFinish()
-# randomDot_2()
-# randomDot_3()
-# randomDot_4()
-# randomDot_5()
 
 Heads = randomDot_6([[round(columns/2),round(rows/2)]])
 printBoard()
 
 print()
 
-
-
-# Heads=[[round(columns/2),round(rows/2)],[2,2],[round(columns/3),2],[2,rows-3],[columns-3,rows-3],[columns-3,2],[2,round(rows/2)],[columns-3,round(rows/2)],[round(columns/2),rows-3],[round(columns/2),2],[round(columns/3)+round(columns/3),2],[round(columns/3)+round(columns/3),round(rows/2)],[round(columns/3),round(rows/2)],[round(columns/3)+round(columns/3),rows-2],[round(columns/3),rows-2]]
-# secHeads = cleanUp()
-# copyHead=[]
-# while True:
-#     secHeads = cleanUp()
-#     if secHeads == copyHead:
-#         break
-#     for i in secHeads:
-#         randomDot_6([i])
-#     copyHead = secHead
-
-# printBoard()
 secHeads = cleanUp()
 copyHead=[]
 counter=0
