@@ -296,3 +296,42 @@ def cleanUp():
                 # checkedBox=[]
                 filledBox=True
     # print(filledBoxesList)
+
+    def lastCleanUp():
+    print('last Clean Up')
+    for  y in range(1,rows-1):
+        for x in range(1,columns-1):
+            # top and bottom frame
+            # if x == 1:
+            #     board[y-1][0]= '■'
+            #     board[y-1][columns-1]= '■'
+            if board[y][x] == '.':
+                if board[y][x+1] == '■' and board[y][x-1] == '■' and board[y+1][x] == '■' and board[y-1][x] == '■':
+                    result = turn4(x,y,[0,1])
+                    board[result[1]][result[0]] = '.'
+    board[1][0]='.'
+
+def cleanUp():
+    print("clean up")
+    filledBox=True
+    filledBoxesList=[]
+    checkedBox=[]
+    finalCheckBox=[]
+    boxed=0
+    for i in range(1,rows-1):
+        for j in range(1,columns-1):
+            if j <= columns-3 and i <= rows-3 and board[i][j] != '.':
+                for r in range(3):
+                    for c in range(3):
+                        if board[i+r-1][j+c-1]=='■':
+                            boxed+=1
+                        if board[i+r][j+c] == '.':
+                            filledBox=False
+            
+                if filledBox and i < rows-1 and j < columns-1:
+                    board[i+1][j+1] = '.'
+                    board[i][j+1] = '.'
+                    board[i+1][j] = '.'
+                filledBox=True
+                boxed=0
+                  
