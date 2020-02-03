@@ -262,3 +262,37 @@ def cleanUp():
         #         print('y <= rows-2 ',y<=rows-2,end=' ')
         #         print('x >= 2 ',x >=2,end=' ')
         #         print('}')
+
+def cleanUp():
+    filledBox=True
+    filledBoxesList=[]
+    checkedBox=[]
+    finalCheckBox=[]
+    for i in range(1,rows-1):
+        for j in range(1,columns-1):
+            if j <= columns-3 and i <= rows-3 and board[i][j] != '.': #rows-4
+                for r in range(3):
+                    for c in range(3):
+                        # if r != 0 or c != 0:
+                        #     checkedBox.append([i+r,j+c])
+                        if board[i+r][j+c] == '.':
+                            filledBox=False
+                if filledBox and i < rows-1 and j < columns-1:
+                    # if [i,j] not in checkedAlready:
+                        # if [i,j] not in finalCheckBox:
+                            # print(f'[j: {j},i: {i}]','i < rows-1 : ',i < rows-1,'j < columns-1: ',j < columns-1) 
+                        # filledBoxesList.append([i,j])
+                        # print('filledBox: ',filledBox,' [i,j] not in checkedAlready', [i,j] not in checkedAlready)
+                        # print('i <= rows-1: ',i <= rows-1,i,'j <= columns-1: ', j <= columns-1,j)
+                        # print([columns-1,rows-1],f'[j: {j},i: {i}]')
+                        # checkedAlready.append([i,j])
+                        # # print(filledBoxesList)
+                        # # for coordinates in checkedBox:
+                        # #     checkedAlready.append(coordinates)
+                        # printBoard()
+                    board[i+1][j+1] = '.'
+                    board[i][j+1] = '.'
+                    # return [i,j]
+                # checkedBox=[]
+                filledBox=True
+    # print(filledBoxesList)
