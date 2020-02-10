@@ -1,7 +1,7 @@
 import random
 import os
-rows= int(input("How many rows would u like? "))
-columns= int(input("How many columns would u like? "))
+rows= int(input("How many rows would u like ( recommended: 30)? "))
+columns= int(input("How many columns would u like ( recommended: 40)? "))
 showWork= input("would you like to see the Maze Generator in action (y/n)? ")
 
 board=[]
@@ -122,6 +122,8 @@ for gen in range(150):
         print("find Start")
         randomDot_6([i])
 
-print("TRY TO GET IN FROM ONE SIDE AND EXIST FROM THE OPPOSITE SIDE. GOOD LUCK!")
+os.system('cls') #clear terminal
+
+print("TRY TO GET IN FROM ONE HOLE AND EXIST FROM ANOTHER. GOOD LUCK!")
 print()
 printBoard()
